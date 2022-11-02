@@ -57,12 +57,13 @@ closeRegModal.addEventListener('click', () => {
 burger.addEventListener('click', () => {
     buttons.classList.add('header__buttons--active');
     document.body.style.overflow = 'hidden';
+    document.querySelector('html').style.overflow = 'hidden';
 });
 
 closeButtons.addEventListener('click', () => {
     buttons.classList.remove('header__buttons--active');
     document.body.style.overflow = '';
-    document.querySelector('html').style.overflow = 'hidden';
+    document.querySelector('html').style.overflow = '';
 })
 
 
