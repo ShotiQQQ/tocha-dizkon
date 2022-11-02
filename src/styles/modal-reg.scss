@@ -1,0 +1,91 @@
+@import "_vars.scss";
+@import "_mixins.scss";
+
+.modal-reg {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(229, 229, 229, .5);
+    &__wrapper {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 480px;
+        height: 502px;
+        padding: 105px 70px;
+        background-color: $default;
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.07);
+        border-radius: 5px;
+        @media (max-width: 450px) {
+            padding: 70px 40px;
+        }
+    }
+    &__close {
+        @extend %btn-reset;
+        position: absolute;
+        width: 28px;
+        height: 28px;
+        top: 26px;
+        right: 26px;
+        background-image: url("../img/close-modal.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+    &__title {
+        font-weight: 800;
+        font-size: 32px;
+        line-height: 32px;
+        margin-bottom: 32px;
+        color: $violet;
+    }
+    &__form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    &__input {
+        width: 100%;
+        background-color: $input-back;
+        padding: 8px 20px;
+        border-radius: 4px;
+        border: none;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: $black;
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+        &:hover {
+            outline: 1px solid $hover-input;
+        }
+        &:focus-visible {
+            outline: 1px solid $focused-input;
+        }
+    }
+    &__remind {
+        @extend %btn-reset;
+        color: $violet;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+        margin-bottom: 32px;
+        align-self: flex-end;
+    }
+    &__go {
+        @include button($default, $violet, 12px 24px);
+        width: 100%;
+        margin-top: 32px;
+        @extend %hover-violet;
+    }
+    &--active {
+        display: flex;
+    }
+}

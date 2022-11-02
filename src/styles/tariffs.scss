@@ -1,0 +1,100 @@
+@import "_vars.scss";
+@import "_mixins.scss";
+
+.tariffs {
+    overflow: hidden;
+    position: relative;
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 100px;
+        padding-bottom: 100px;
+        @media (max-width: 768px) {
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+    }
+    &__title {
+        font-weight: 800;
+        font-size: 46px;
+        line-height: 64px;
+        color: $black;
+        margin-bottom: 16px;
+        @media (max-width: 768px) {
+            font-size: 32px;
+            line-height: 40px;
+            margin-bottom: 8px;
+        }
+    }
+    &__remark {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 32px;
+        color: $black;
+        margin-bottom: 40px;
+        text-align: center;
+        @media (max-width: 768px) {
+            font-size: 20px;
+            line-height: 28px;
+            margin-bottom: 36px;
+        }
+    }
+    &__wrapper {
+        width: 100%;
+    }
+    &__cards {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: calc(33.33333% - 15px);
+        min-height: 100%;
+        background-color: $backgroundCard;
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, .07);
+        padding-bottom: 50px;
+        border-radius: 6px;
+        min-height: 100%;
+    }
+    &__tariff {
+        display: inline-block;
+        width: 100%;
+        background: rgba(104, 94, 214, .05);
+        text-align: center;
+        font-weight: 800;
+        font-size: 24px;
+        line-height: 48px;
+        color: $violet;
+        margin-bottom: 46px;
+        padding: 6px;
+        border-radius: 6px 6px 0 0;
+    }
+    &__subtitle {
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 40px;
+        text-align: center;
+        color: $black;
+        margin-bottom: 32px;
+        max-width: 255px;
+    }
+    &__price {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 30px;
+        color: $black;
+        margin-bottom: 46px;
+    }
+    &__button {
+        @include button($default, $violet, 12px 0);
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, .07);
+        margin-top: auto;
+        @extend %hover-violet;
+        width: 100%;
+        max-width: 270px;
+    }
+}

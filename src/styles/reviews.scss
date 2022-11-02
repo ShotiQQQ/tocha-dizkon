@@ -1,0 +1,103 @@
+@import "_vars.scss";
+@import "_mixins.scss";
+
+.reviews {
+    background: rgba(242, 247, 255, .5);
+    backdrop-filter: blur(50px);
+    &__container {
+        background-image: url("../img/reviews-quote.svg");
+        background-repeat: no-repeat;
+        background-position: right top;
+        padding-top: 17px;
+        padding-bottom: 80px;
+        @media (max-width: 768px) {
+            padding-top: 60px;
+        }
+        @media (max-width: 768px) {
+            background-size: 54px 46px;
+          }
+    }
+    &__title {
+        text-align: center;
+        font-weight: 800;
+        font-size: 46px;
+        line-height: 64px;
+        color: $black;
+        margin-bottom: 48px;
+        @media (max-width: 768px) {
+            font-size: 32px;
+            line-height: 40px;
+            margin-bottom: 40px;
+        }
+    }
+    &__card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: calc(50% - 28px);
+        min-height: 100%;
+        @media (max-width: 768px) {
+            width: 540px;
+        }
+        @media (max-width: 600px) {
+            width: 328px;
+        }
+    }
+    .swiper-slide {
+        height: auto;
+    }
+    &__content {
+        position: relative;
+        padding: 32px 32px 56px 32px;
+        margin-bottom: 28px;
+        background-color: $default;
+        border-radius: 6px;
+        box-shadow: 0px 10px 20px rgba(41, 41, 42, .07);
+        &::after {
+            content: "";
+            bottom: -3px;
+            position: absolute;
+            left: calc(50% - 24px);
+            width: 24px;
+            height: 15px;
+            background-color: $default;
+            transform: rotate(45deg);
+            border-radius: 3px;
+        }
+    }
+    &__subtitle {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 28px;
+        text-align: center;
+        color: $gray900;
+        margin-bottom: 8px;
+    }
+    &__text {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+        text-align: center;
+        color: $gray900;
+    }
+    &__person {
+        display: flex;
+        align-items: center;
+        margin-top: auto;
+    }
+    &__photo {
+        margin-right: 16px;
+    }
+    &__name {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 28px;
+        color: $black;
+    }
+    &__site {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+        color: $black;
+    }
+}

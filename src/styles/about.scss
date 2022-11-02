@@ -1,0 +1,98 @@
+@import "_vars.scss";
+@import "_mixins.scss";
+
+.about {
+    background-color: rgba(242, 247, 255, .5);
+    backdrop-filter: blur(50px);
+    &__container {
+        display: flex;
+        padding-top: 73px;
+        padding-bottom: 86px;
+        @media (max-width: 768px) {
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+        @media (max-width: 650px) {
+            flex-direction: column;
+            row-gap: 24px;
+        }
+    }
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        max-width: 522px;
+        width: 50%;
+        padding-top: 22px;
+        @media (max-width: 768px) {
+            width: 60%;
+        }
+        @media (max-width: 650px) {
+            width: 100%;
+        }
+
+    }
+    &__title {
+        font-weight: 800;
+        font-size: 48px;
+        line-height: 32px;
+        margin-bottom: 68px;
+        color: $black;
+        @media (max-width: 768px) {
+            font-size: 32px;
+            line-height: 40px;
+            margin-bottom: 40px;
+        }
+    }
+    &__item {
+        background-position: left center;
+        background-repeat: no-repeat;
+        background-size: 62px 62px;   
+        padding-left: 94px;
+        &:not(:last-child) {
+            margin-bottom: 48px;
+        }
+        &--1 {
+            background-image: url("../img/about-telegram.svg");
+        }
+        &--2 {
+            background-image: url("../img/about-easy.svg");
+        }
+        &--3 {
+            background-image: url("../img/about-assist.svg");
+        }
+        &--4 {
+            background-image: url("../img/about-custom.svg");
+        }
+        @media (max-width: 768px) {
+            background-size: 42px 42px;
+            padding-left: 60px;
+        }
+    }
+    &__subtitle {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 32px;
+        color: $black;
+        margin-bottom: 8px;
+        @media (max-width: 768px) {
+            font-size: 20px;
+            line-height: 32px;
+            margin-bottom: 4px;
+        }
+    }
+    &__descr {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+        color: $black;
+    }
+    &__picture {
+        @media (max-width: 1024px) {
+            align-self: center;
+        }
+        @media (max-width: 768px) {
+            max-width: 300px;
+        }
+    }
+}

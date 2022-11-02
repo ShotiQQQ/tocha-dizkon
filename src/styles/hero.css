@@ -1,0 +1,48 @@
+.hero__button {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.hero__container {
+  display: flex;
+  padding-top: 59px;
+  padding-bottom: 59px;
+}
+.hero__content {
+  max-width: 481px;
+}
+.hero__title {
+  max-width: 383px;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 60px;
+  margin-bottom: 24px;
+  color: #685ED6;
+}
+.hero__black {
+  color: #1D2530;
+}
+.hero__info {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 34px;
+  color: #1D2530;
+  margin-bottom: 32px;
+}
+.hero__free {
+  font-weight: 800;
+  color: #685ED6;
+}
+.hero__button {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 12px 32px;
+  color: #fff;
+  background: #685ED6;
+  text-align: center;
+  border-radius: 6px;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
