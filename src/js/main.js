@@ -15,6 +15,9 @@ enter.addEventListener('click', () => {
 })
 closeEnterModal.addEventListener('click', () => {
     enterModal.classList.remove('modal-enter--active');
+    document.querySelectorAll('.modal-enter__input').forEach((e) => {
+        e.value = '';
+    })
     document.body.style.overflowY = '';
 })
 
@@ -25,6 +28,9 @@ reg.addEventListener('click', () => {
 })
 closeRegModal.addEventListener('click', () => {
     regModal.classList.remove('modal-reg--active');
+    document.querySelectorAll('.modal-reg__input').forEach((e) => {
+        e.value = '';
+    })
     document.body.style.overflowY = '';
 })
 
