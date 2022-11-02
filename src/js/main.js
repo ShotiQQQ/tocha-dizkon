@@ -17,7 +17,8 @@ enter.addEventListener('click', () => {
     enterModal.querySelector('.modal-enter__remind').addEventListener('click', (e) => {
         e.preventDefault();
     })
-    document.body.style.overflowY = 'hidden';
+    document.body.style.overflow = 'hidden';
+    document.querySelector('html').style.overflow = 'hidden';
 })
 closeEnterModal.addEventListener('click', () => {
     enterModal.classList.remove('modal-enter--active');
@@ -29,13 +30,15 @@ closeEnterModal.addEventListener('click', () => {
     document.querySelectorAll('.js-validate-error-label').forEach((e) => {
         e.remove();
     })
-    document.body.style.overflowY = '';
+    document.body.style.overflow = '';
+    document.querySelector('html').style.overflow = '';
 })
 
 reg.addEventListener('click', () => {
     regModal.classList.add('modal-reg--active');
     buttons.classList.remove('header__buttons--active');
-    document.body.style.overflowY = 'hidden';
+    document.body.style.overflow = 'hidden';
+    document.querySelector('html').style.overflow = 'hidden';
 })
 closeRegModal.addEventListener('click', () => {
     regModal.classList.remove('modal-reg--active');
@@ -47,17 +50,19 @@ closeRegModal.addEventListener('click', () => {
     document.querySelectorAll('.js-validate-error-label').forEach((e) => {
         e.remove();
     })
-    document.body.style.overflowY = '';
+    document.body.style.overflow = '';
+    document.querySelector('html').style.overflow = '';
 })
 
 burger.addEventListener('click', () => {
     buttons.classList.add('header__buttons--active');
-    document.body.style.overflowY = 'hidden';
+    document.body.style.overflow = 'hidden';
 });
 
 closeButtons.addEventListener('click', () => {
     buttons.classList.remove('header__buttons--active');
-    document.body.style.overflowY = '';
+    document.body.style.overflow = '';
+    document.querySelector('html').style.overflow = 'hidden';
 })
 
 
