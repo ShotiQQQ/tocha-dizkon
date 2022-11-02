@@ -162,3 +162,8 @@ ul {
     background-position: left center;
   }
 }
+
+::-ms-reveal {
+  width : 0;
+  height: 0;
+}
