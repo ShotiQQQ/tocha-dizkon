@@ -216,3 +216,15 @@ new JustValidate('.modal-reg__form', {
         
     }
 });
+
+const eyes = document.querySelectorAll('.eye');
+
+eyes.forEach((e) => {
+    e.addEventListener('click', (event) => {
+        if (event.target.parentElement.children[0].type === 'password') {
+            event.target.parentElement.children[0].type = 'text';
+        } else {
+            event.target.parentElement.children[0].type = 'password';
+        }
+    })
+})

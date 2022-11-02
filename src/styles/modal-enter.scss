@@ -51,6 +51,7 @@
         width: 100%;
     }
     &__input {
+        position: relative;
         width: 100%;
         background-color: $input-back;
         padding: 8px 20px;
@@ -68,6 +69,19 @@
         }
         &:focus-visible {
             outline: 1px solid $focused-input;
+        }
+        &--container-password {  
+            position: relative;
+            .eye {
+                position: absolute;
+                top: 8px;
+                right: 20px;
+                width: 24px;
+                height: 24px;
+                background-image: url("../img/eye.svg");
+                background-repeat: no-repeat;
+                cursor: pointer;
+            }
         }
     }
     &__remind {

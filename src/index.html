@@ -287,7 +287,10 @@
             <h2 class="modal-enter__title">Вход</h2>
             <form class="modal-enter__form" action="POST">
                 <input class="modal-enter__input" id="enter-tel" type="tel" placeholder="Телефон" data-validate-field="phone">
-                <input class="modal-enter__input" type="password" placeholder="Пароль" data-validate-field="password">
+                <div class="modal-enter__input--container-password">
+                    <input class="modal-enter__input modal-enter__input--password" type="password" placeholder="Пароль" data-validate-field="password">
+                    <span class="eye"></span>
+                </div>
                 <button class="modal-enter__remind">Напомнить пароль</button>
                 <button class="modal-enter__go">Войти</button>
             </form>
@@ -300,8 +303,14 @@
             <form class="modal-reg__form" action="POST">
                 <input class="modal-reg__input" id="reg-tel" type="tel" placeholder="Телефон" data-validate-field="phone">
                 <input class="modal-reg__input" type="email" placeholder="Электронная почта" data-validate-field="email">
-                <input class="modal-reg__input" type="password" placeholder="Пароль" data-validate-field="password" name="firstpassword" id="firstpassword">
-                <input class="modal-reg__input" type="password" placeholder="Повторите пароль" data-validate-field="password1" name="password1" id="password1">
+                <div class="modal-reg__input--container-password">
+                    <input class="modal-reg__input modal-reg__input--password" type="password" placeholder="Пароль" data-validate-field="password" name="firstpassword" id="firstpassword">
+                    <span class="eye"></span>
+                </div>
+                <div class="modal-reg__input--container-password">
+                    <input class="modal-reg__input modal-reg__input--password" type="password" placeholder="Повторите пароль" data-validate-field="password1" name="password1" id="password1">
+                    <span class="eye"></span>
+                </div>
                 <button class="modal-reg__go">Войти</button>
             </form>
         </div>
