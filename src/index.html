@@ -286,8 +286,8 @@
             <button class="modal-enter__close"></button>
             <h2 class="modal-enter__title">Вход</h2>
             <form class="modal-enter__form" action="POST">
-                <input class="modal-enter__input" type="tel" placeholder="Телефон">
-                <input class="modal-enter__input" type="password" placeholder="Пароль">
+                <input class="modal-enter__input" id="enter-tel" type="tel" placeholder="Телефон" data-validate-field="phone">
+                <input class="modal-enter__input" type="password" placeholder="Пароль" data-validate-field="password">
                 <button class="modal-enter__remind">Напомнить пароль</button>
                 <button class="modal-enter__go">Войти</button>
             </form>
@@ -298,10 +298,10 @@
             <button class="modal-reg__close"></button>
             <h2 class="modal-reg__title">Регистрация</h2>
             <form class="modal-reg__form" action="POST">
-                <input class="modal-reg__input" type="tel" placeholder="Телефон">
-                <input class="modal-reg__input" type="email" placeholder="Электронная почта">
-                <input class="modal-reg__input" type="password" placeholder="Пароль">
-                <input class="modal-reg__input" type="password" placeholder="Пароль">
+                <input class="modal-reg__input" id="reg-tel" type="tel" placeholder="Телефон" data-validate-field="phone">
+                <input class="modal-reg__input" type="email" placeholder="Электронная почта" data-validate-field="email">
+                <input class="modal-reg__input" type="password" placeholder="Пароль" data-validate-field="password" name="firstpassword" id="firstpassword">
+                <input class="modal-reg__input" type="password" placeholder="Повторите пароль" data-validate-field="password1" name="password1" id="password1">
                 <button class="modal-reg__go">Войти</button>
             </form>
         </div>
