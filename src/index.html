@@ -300,15 +300,15 @@
         <div class="modal-reg__wrapper">
             <button class="modal-reg__close"></button>
             <h2 class="modal-reg__title">Регистрация</h2>
-            <form class="modal-reg__form" action="POST">
+            <form class="modal-reg__form" id="modal-reg__form" action="POST">
                 <input class="modal-reg__input" id="reg-tel" type="tel" placeholder="Телефон" data-validate-field="phone">
                 <input class="modal-reg__input" type="email" placeholder="Электронная почта" data-validate-field="email">
                 <div class="modal-reg__input--container-password">
-                    <input class="modal-reg__input modal-reg__input--password" type="password" placeholder="Пароль" data-validate-field="password" name="firstpassword" id="firstpassword">
+                    <input class="modal-reg__input modal-reg__input--password modal-reg__input--password-origin" type="password" placeholder="Пароль" data-validate-field="password" name="firstpassword" id="firstpassword">
                     <span class="eye"></span>
                 </div>
                 <div class="modal-reg__input--container-password">
-                    <input class="modal-reg__input modal-reg__input--password" type="password" placeholder="Повторите пароль" data-validate-field="password1" name="password1" id="password1">
+                    <input class="modal-reg__input modal-reg__input--password modal-reg__input--password-repeat" type="password" placeholder="Повторите пароль" data-validate-field="password1" name="password1" id="password1">
                     <span class="eye"></span>
                 </div>
                 <button class="modal-reg__go">Войти</button>

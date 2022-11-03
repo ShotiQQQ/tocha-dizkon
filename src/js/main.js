@@ -52,7 +52,18 @@ closeRegModal.addEventListener('click', () => {
     })
     document.body.style.overflow = '';
     document.querySelector('html').style.overflow = '';
-})
+});
+
+document.querySelector('.modal-reg__go').addEventListener('click', (e) => {
+    const passRepeat = document.querySelector('.modal-reg__input--password-repeat');
+    const passOrigin = document.querySelector('.modal-reg__input--password-origin');
+
+    if((passRepeat.value !== passOrigin.value) && (passRepeat.value.length >= 4) && (passOrigin.value.length >= 4)) {
+        alert('Пароли не совпадают, пожалуйста, повторите попытку');
+        e.preventDefault();
+        return
+    }
+});
 
 burger.addEventListener('click', () => {
     buttons.classList.add('header__buttons--active');
@@ -189,7 +200,7 @@ new JustValidate('.modal-enter__form', {
     }
 });
 
-new JustValidate('.modal-reg__form', {
+new JustValidate('#modal-reg__form', {
     rules: {
         phone: {
             required: true,
@@ -220,7 +231,7 @@ new JustValidate('.modal-reg__form', {
             email: 'Введите корректный Email'
         }
         
-    }
+    },
 });
 
 const eyes = document.querySelectorAll('.eye');
