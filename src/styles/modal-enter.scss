@@ -2,7 +2,7 @@
 @import "_mixins.scss";
 
 .modal-enter {
-    display: none;
+    display: flex;
     align-items: center;
     justify-content: center;
     position: fixed;
@@ -11,6 +11,8 @@
     right: 0;
     left: 0;
     background-color: rgba(229, 229, 229, .5);
+    transform: translateY(-100%);
+    transition: transform .5s;
     &__wrapper {
         position: relative;
         display: flex;
@@ -99,6 +101,6 @@
         @extend %hover-violet;
     }
     &--active {
-        display: flex;
+        transform: translateY(0);
     }
 }
